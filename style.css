@@ -1,0 +1,44 @@
+.instructions {
+    display: none;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.main {
+    height: 250vh;
+    overflow: auto;
+}
+
+table {
+    position: relative;
+    margin: 5% auto;
+}
+
+th {
+    font-size: 24px;
+}
+
+tr {
+    font-size: 19px;
+}
+
+#content {
+    display: none;
+    overflow: auto;
+    height: 100vh;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.modal-info {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    overflow-y: auto;
+}

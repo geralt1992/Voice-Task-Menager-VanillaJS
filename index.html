@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- materialize CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <title>Voice Task Menager</title>
+</head>
+<body>
+
+
+    <nav>
+    <div class="nav-wrapper">
+        <a href="#" disabled class="brand-logo center">Voice Task Menager</a>
+    </div>
+    </nav>
+
+<section class="main" style="margin-bottom: 5rem;">
+    <div class="container">
+
+        <button id="doneTask" class="tooltipped modal-trigger btn-floating btn-large waves-effect green right lighten-2" data-position="bottom" data-tooltip="Press and tell that you done your task" href="#modal2" style="margin: 2rem 0;">Done<i class="material-icons">add</i></button>
+        <button id="addTask"  class="tooltipped modal-trigger btn-floating btn-large waves-effect pulse waves-dark red lighten-2" data-position="bottom" data-tooltip="Press and tell your Task" href="#modal1" style="margin: 2rem 0;">Add<i class="material-icons">add</i></button>
+        <h2 style="letter-spacing: 4px;">ACTIVE TASKS</h2>
+
+        <table id="wholeTable" class=" responsive-table centered">
+            <thead>
+            <tr>
+                <th>Number</th>
+                <th>Task</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody id="out"></tbody>
+        </table>
+
+
+
+
+        <h1 style="margin-top: 15rem; letter-spacing: 4px;">DONE TASKS</h1> <button id="showHideBtn" style="font-weight: 900;" class="btn btn-large green lighten-2">PRIKAŽI</button>
+
+        <div id="content">
+            <table id="doneTasks" class="responsive-table centered">
+                <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Task</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="doneOut">
+
+                </tbody>
+            </table>
+            <button id="clearDoneTasks" class="tooltipped btn-floating btn-large waves-effect  waves-light black right accent-2" data-position="bottom" data-tooltip="Press and erase all done tasks" style="margin: 2rem 0;">Clear<i class="material-icons">add</i></button>
+        </div>
+
+    </div>
+</section>
+
+
+<footer class="page-footer red lighten-2">
+        <div class="container">
+            <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Voice Task Menager</h5>
+                <p class="grey-text text-lighten-4">Spremite, uklonite i obavljajte svoje obveze glasovnom naredbom, brzo i jednostavno!</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text" style="font-size: 2.5rem;">YOU SAID:</h5>
+                <div style="font-size: 2rem;" id="youSaid"></div>
+            </div>
+            </div>
+        </div>
+</footer>
+
+
+<!-- MODALS -->
+            <!-- Modal 1 -->
+                <div id="modal1" class="modal red lighten-2">
+                    <div class="modal-content center white-text">
+                        <h1 style="margin-bottom: 2rem;">Tell your command</h1>
+                        <h5>SAVE Task - Tell your task and at the end tell SAVE</h5>
+                            <p>EXAMPLE - "Clean house SAVE"</p>
+                        <h5>REMOVE Task -Tell task number and after that tell REMOVE</h5>
+                            <p>EXAMPLE - "Two REMOVE"</p>
+                    </div>
+                    <div class="modal-footer red lighten-2 ">
+                        <a href="#!" id="modalOk1" class="modal-close waves-effect waves-green btn-flat white-text" style="font-size:larger">Ok</a>
+                    </div>
+                </div>
+            <!-- Modal -->
+
+            <!-- Modal 2 -->
+            <div id="modal2" class="modal green lighten-2">
+                <div class="modal-content center white-text">
+                    <h1 style="margin-bottom: 2rem;">Tell your command</h1>
+                    <h5 style="padding: 2rem;">OK Task - Tell task number and after that tell OK</h5>
+                    <hp>EXAMPLE - "Two OK"</hp>
+                </div>
+                <div class="modal-footer green lighten-2 ">
+                    <a href="#!" id="modalOk2" class="modal-close waves-effect waves-white btn-flat white-text" style="font-size:larger">Ok</a>
+                </div>
+            </div>
+            <!-- Modal-->
+<!-- MODALS -->
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
